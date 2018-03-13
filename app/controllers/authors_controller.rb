@@ -9,7 +9,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
 
-    render :new unless @post.valid?
+    render :new unless @author.valid?
 
     @post.save
     redirect_to author_path(@author)
